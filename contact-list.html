@@ -1,0 +1,78 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+
+<dom-module id="contact-list">
+
+  <style>
+
+  list-style {
+  	list-style: none;
+  }
+  
+  li {
+  	display: flex;
+  	padding: 20px;
+  }
+
+  li + li {
+  	border-top: solid 1px #666;
+  }
+
+  li img {
+  	border-radius:  50%;
+  	margin-right: 40px;
+  }
+
+  h3 {
+  	margin: 0 40px 0 0;
+  	line-height: 80px;
+  }
+
+  li span {
+  	line-height: 80px;
+  }
+
+  </style>
+
+  <template>
+  	<ul>
+  		<template>
+	  		<li>
+	  			<img src="https://randomuser.me/api/portraits/thumb/men/10.jpg" alt="">
+	  			<h3>Scott</h3>
+	  			<span>scott@email.com</span>
+	  		</li>
+  		</template>
+  	</ul>
+  </template>
+
+</dom-module> 
+
+
+<script>
+
+Polymer({
+	is: "contact-list",
+  ready: function() {
+  	this.contacts = [
+  		 {
+  		 	name: "Scott",
+  		 	email: "Scott@example.com",
+  		 	img: "https://randomuser.me/api/portraits/thumb/men/10.jpg"
+  		 },
+  		 {
+  		 	name: "Tim",
+  		 	email: "Tim@example.com",
+  		 	img: "https://randomuser.me/api/portraits/thumb/men/5.jpg"
+  		 },
+  		 {
+  		 	name: "Ben",
+  		 	email: "Ben@example.com",
+  		 	img: "https://randomuser.me/api/portraits/thumb/men/3.jpg"
+  		 }
+  	]
+  }
+
+});
+
+</script>
